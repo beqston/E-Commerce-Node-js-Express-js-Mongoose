@@ -71,8 +71,6 @@ const userSchema = new mongoose.Schema({
       default: true,
       select: false,
     },
-    
-
 },{
     toJSON:{virtuals:true},
     toObject: {virtuals:true}
@@ -140,6 +138,7 @@ userSchema.pre('findOneAndDelete', async function(next) {
     next(err);
   }
 });
+
 
 const User = mongoose.model('User', userSchema);
 export default User;

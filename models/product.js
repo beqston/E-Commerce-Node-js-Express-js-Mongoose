@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
     description:{
         type: String,
         trim:true,
-        reqired: [true, 'Description is required']
+        required: [true, 'Description is required']
     },
     image:{
         type:String,
@@ -28,7 +28,6 @@ const productSchema = new mongoose.Schema({
     toJSON:{virtuals:true},
     toObject: {virtuals:true}
 });
-
 
 const Product = mongoose.model('Product', productSchema);
 
